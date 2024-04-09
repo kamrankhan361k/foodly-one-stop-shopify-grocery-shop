@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Shipping update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Email Templates for Foodly Theme">
+    <meta name="author" content="Congruity Hub">
+    <!-- Styles -->
+    <link href="../fonts/fonts.css" type="text/css" rel="stylesheet" />
+    <link href="../css/custom-style.css" type="text/css" rel="stylesheet" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="../ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../ico/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57x57.png">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="heading heading--seperate">Shipping update</h1>
+            <div class="code-container">
+                <h2 class="code-heading">Please, press Ctrl+C (Cmd+C) to copy the code</h2>
+                <textarea class="email-code-area">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- General page information -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Shipping update</title>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Bitter' rel='stylesheet' type='text/css'>
+    <!-- Custom Style -->
+    <style type="text/css">
+    [style*="Raleway"] {
+        font-family: Raleway, Tahoma, Geneva, sans-serif !important;
+    }
+    
+    [style*="Bitter"] {
+        font-family: Bitter, 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+    }
+    </style>
+</head>
+
+<body style="margin:0; padding:0;">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;" bgcolor="#f5f4f4">
+        <tr>
+            <td>
+                <table width="520" cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse;">
+                    <!-- Top space -->
+                    <tr>
+                        <td valign="top" align="center" height="80" style="font-size:1px;"></td>
+                    </tr>
+                    <!-- end top space -->
+                    <!-- Header -->
+                    <tr>
+                        <td valign="top" align="center" bgcolor="#ffffff" style="font-size:1px;">
+                            <table width="460" cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse;">
+                                <tr>
+                                    <td valign="top" align="center" style="font-size:1px;">
+                                        <!-- Point -->
+                                        <table cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                                <td valign="top" align="center" height="38" style="font-size:1px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" align="center" height="4" width="4" style="font-size:4px; border-radius: 50%; background-color: #5c4b51;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" align="center" height="37" style="font-size:1px;"></td>
+                                            </tr>
+                                        </table>
+                                        <!-- End Point -->
+                                        <!-- Greatting message -->
+                                        <table cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                                <td valign="top" align="center" style="font-family: Bitter, 'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size:24px; color: #5c4b51; line-height: 30px;">
+                                                    {% if billing_address.name %}Dear {{ billing_address.name }},{% endif %}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- End Greatting message -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End header -->
+                    <!-- Content section -->
+                    <tr>
+                        <td valign="top" align="center" bgcolor="#ffffff" style="font-size:1px;">
+                            <table width="460" cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse;">
+                                <tr>
+                                    <td valign="top" align="center" height="29" style="font-size:1px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" height="38" width="460" style="font-size:1px; border-top: solid 3px #f5f4f4;" bgcolor="#ffffff"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" style="font-size:16px; font-family: Raleway, Tahoma, Geneva, sans-serif; text-align: left; line-height: 30px; color: #5c4b51; padding-left: 30px;">
+                                        The following shipped items from order <strong>{{ name }}</strong> have been updated with new shipping information:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" height="19" style="font-size:1px;"></td>
+                                </tr>
+                                {% for line in fulfillment.fulfillment_line_items %}
+                                <tr>
+                                    <td valign="top" align="center" style="font-size:16px; font-family: Raleway, Tahoma, Geneva, sans-serif; line-height: 30px; font-weight: bold; text-align: left; color: #5c4b51; {% unless forloop.last %} border-bottom: solid 1px #f5f4f4;{% endunless %} padding: 10px 0px 10px 50px;">
+                                        {{ line.quantity }} x {{ line.line_item.title }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td valign="top" align="center" height="20" style="font-size:1px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" style="font-size:16px; font-family: Raleway, Tahoma, Geneva, sans-serif; line-height: 30px; text-align: left; color: #5c4b51; padding: 10px 0px 10px 30px;">
+                                        They are being shipped{% if fulfillment.tracking_company %} via {{ fulfillment.tracking_company }}{% endif %} with tracking number <strong>{{ fulfillment.tracking_number }}</strong>. You can see the status of this shipment at the following URL:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" height="20" style="font-size:1px;"></td>
+                                </tr>
+                                <tr>
+                                    <td width="400" valign="top" align="center" style="font-size:16px; font-family: Raleway, Tahoma, Geneva, sans-serif; font-weight: bold; line-height: 30px; word-break:break-all; text-align: center;">
+                                        <font style="word-break:break-all;"><a href="{% if order_status_url %} {{ order_status_url }} {% else %} {{ fulfillment.tracking_url }}{% endif %}" style="text-decoration: none; color: #f06060; word-break:break-all;">{% if order_status_url %} {{ order_status_url }} {% else %} {{ fulfillment.tracking_url }}{% endif %}</a></font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" height="20" style="font-size:1px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" height="20" width="460" style="font-size:1px; border-bottom: solid 3px #f5f4f4;" bgcolor="#ffffff"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" height="37" style="font-size:1px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" style="font-size:16px; font-family: Raleway, Tahoma, Geneva, sans-serif; line-height: 30px; color: #5c4b51;">
+                                        Please allow some time for the status of the shipment to correctly display at the above address.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center" height="20" style="font-size:11px;"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End Content section -->
+                    <!-- Footer -->
+                    <tr>
+                        <td valign="top" align="center" bgcolor="#ffffff" style="font-size:1px;">
+                            <table width="460" cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse;">
+                                <tr>
+                                    <td valign="top" align="center" style="font-size:1px;">
+                                        <!-- Thank you section -->
+                                        <table width="400" cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                                <td valign="top" align="center" height="10" style="font-size:11px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" align="center" style="font-size:14px; font-family: Raleway, Tahoma, Geneva, sans-serif; line-height: 30px; color: #ada2a4;">
+                                                    Thanks for shopping!
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="400" valign="top" align="center" style="font-size:14px; font-family: Raleway, Tahoma, Geneva, sans-serif; line-height: 10px; color: #ada2a4;">
+                                                    {{ shop.name | capitalize }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" align="center" height="15" style="font-size:11px;"></td>
+                                            </tr>
+                                        </table>
+                                        <!-- End Thank you section -->
+                                        <!-- Point -->
+                                        <table cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                                <td valign="top" align="center" height="23" style="font-size:1px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" align="center" height="4" width="4" style="font-size:4px; border-radius: 50%; background-color: #5c4b51;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" align="center" height="37" style="font-size:1px;"></td>
+                                            </tr>
+                                        </table>
+                                        <!-- End Point -->
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- End 540px table -->
+                        </td>
+                    </tr>
+                    <!-- End Footer -->
+                    <!-- Bottom space -->
+                    <tr>
+                        <td valign="top" align="center" height="80" style="font-size:1px;"></td>
+                    </tr>
+                    <!-- end Bottom space -->
+                </table>
+                <!-- End content table -->
+            </td>
+        </tr>
+    </table>
+    <!-- End main wrapper table -->
+</body>
+
+</html>
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <script>
+        var emailCode = document.querySelector('.email-code-area');
+
+        emailCode.focus();
+        emailCode.setSelectionRange(0, emailCode.value.length);
+    </script>
+</body>
+
+</html>
